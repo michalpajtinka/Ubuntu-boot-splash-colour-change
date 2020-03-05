@@ -11,7 +11,7 @@ sudo cp -R /usr/share/plymouth/themes/ubuntu-logo /usr/share/plymouth/themes/ubu
 # 2. Edit the name and location information:
 ---
 ```
-sudo vim /usr/share/plymouth/themes/ubuntu-logo-nonpink/ubuntu-logo.plymouth
+sudo nano /usr/share/plymouth/themes/ubuntu-logo-nonpink/ubuntu-logo.plymouth
 ```
 
 I have changed these lines:
@@ -25,7 +25,7 @@ ScriptFile=/usr/share/plymouth/themes/ubuntu-logo-nonpink/ubuntu-logo.script
 # 3. Edit the color in script:
 ---
 ```
-sudo vim /usr/share/plymouth/themes/ubuntu-logo-nonpink/ubuntu-logo.script
+sudo nano /usr/share/plymouth/themes/ubuntu-logo-nonpink/ubuntu-logo.script
 ```
 
 I have changed these lines:
@@ -73,4 +73,15 @@ sudo update-alternatives --config default.plymouth
 sudo update-initramfs -u
 ```
 
-# 9. Enjoy nice new boot splash screen :D
+# Change grub background-color:
+```bash
+sudo nano /usr/share/plymouth/themes/ubuntu-logo-nonpink/ubuntu-logo.grub
+sudo update-grub
+```
+
+# Change lock-screen background-color:
+search for #lockDialogGroup
+```bash
+sudo nano /usr/share/gnome-shell/theme/gnome-shell.css
+```
+

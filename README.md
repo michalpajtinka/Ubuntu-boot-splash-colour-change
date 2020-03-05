@@ -90,3 +90,11 @@ search for #lockDialogGroup
 ```bash
 sudo nano /etc/alternatives/gdm3.css
 ```
+
+### Notation to set image as background:
+```css
+background: url(file:///usr/share/backgrounds/mybackground.png);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+```

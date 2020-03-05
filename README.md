@@ -85,3 +85,8 @@ search for #lockDialogGroup
 sudo nano /usr/share/gnome-shell/theme/gnome-shell.css
 ```
 
+# Change login screen after boot:
+search for #lockDialogGroup
+```bash
+sudo nano /etc/alternatives/gdm3.css
+```

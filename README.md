@@ -1,4 +1,4 @@
-I am using Ubuntu 16.04 and I really like Ubuntu very much, but I really don't like that purple colour everywhere. It was easy to chage desktop theme, but a bit more difficult to change colour of Plymouth boot splash. You can install other available boot splash by installing another packages, or you can create new theme by updating the current one. Here is some help:
+I am using Ubuntu 19.10 and I really like Ubuntu very much, but I really don't like that purple colour everywhere. It was easy to chage desktop theme, but a bit more difficult to change colour of Plymouth boot splash. You can install other available boot splash by installing another packages, or you can create new theme by updating the current one. Here is some help:
 
 This is based on the _khAttAm_ blog which has a bit outdated paths, but otherwise is still working.
 https://www.khattam.info/howto-change-ubuntu-pinkpurple-plymouth-boot-screen-to-any-color-you-like-2010-11-09.html

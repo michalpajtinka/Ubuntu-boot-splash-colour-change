@@ -1,4 +1,4 @@
-I am using Ubuntu 16.04 and I really like Ubuntu very much, but I really don't like that purple colour everywhere. It was easy to chage desktop theme, but a bit more difficult to change colour of Plymouth boot splash. You can install other available boot splash by installing another packages, or you can create new theme by updating the current one. Here is some help:
+I am using Ubuntu 19.10 and I really like Ubuntu very much, but I really don't like that purple colour everywhere. It was easy to chage desktop theme, but a bit more difficult to change colour of Plymouth boot splash. You can install other available boot splash by installing another packages, or you can create new theme by updating the current one. Here is some help:
 
 This is based on the _khAttAm_ blog which has a bit outdated paths, but otherwise is still working.
 https://www.khattam.info/howto-change-ubuntu-pinkpurple-plymouth-boot-screen-to-any-color-you-like-2010-11-09.html
@@ -11,7 +11,7 @@ sudo cp -R /usr/share/plymouth/themes/ubuntu-logo /usr/share/plymouth/themes/ubu
 # 2. Edit the name and location information:
 ---
 ```
-sudo vim /usr/share/plymouth/themes/ubuntu-logo-nonpink/ubuntu-logo.plymouth
+sudo nano /usr/share/plymouth/themes/ubuntu-logo-nonpink/ubuntu-logo.plymouth
 ```
 
 I have changed these lines:
@@ -25,7 +25,7 @@ ScriptFile=/usr/share/plymouth/themes/ubuntu-logo-nonpink/ubuntu-logo.script
 # 3. Edit the color in script:
 ---
 ```
-sudo vim /usr/share/plymouth/themes/ubuntu-logo-nonpink/ubuntu-logo.script
+sudo nano /usr/share/plymouth/themes/ubuntu-logo-nonpink/ubuntu-logo.script
 ```
 
 I have changed these lines:
@@ -73,4 +73,28 @@ sudo update-alternatives --config default.plymouth
 sudo update-initramfs -u
 ```
 
-# 9. Enjoy nice new boot splash screen :D
+# Change grub background-color:
+```bash
+sudo nano /usr/share/plymouth/themes/ubuntu-logo-nonpink/ubuntu-logo.grub
+sudo update-grub
+```
+
+# Change lock-screen background-color:
+search for #lockDialogGroup
+```bash
+sudo nano /usr/share/gnome-shell/theme/gnome-shell.css
+```
+
+# Change login screen after boot:
+search for #lockDialogGroup
+```bash
+sudo nano /etc/alternatives/gdm3.css
+```
+
+### Notation to set image as background:
+```css
+background: url(file:///usr/share/backgrounds/mybackground.png);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+```
